@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('status');
             $table->unsignedBigInteger('id_user')->unique()->nullable();
-            $table->unsignedBigInteger('id_tim')->unique()->nullable();
+            $table->unsignedBigInteger('id_tim')->nullable();
             $table->foreign('id_user')->references('id')->on('users')->nullOnDelete();
             $table->foreign('id_tim')->references('id')->on('tim')->restrictOnDelete();
             $table->timestamps();

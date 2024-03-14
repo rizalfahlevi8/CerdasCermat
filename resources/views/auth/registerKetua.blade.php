@@ -25,6 +25,12 @@
             <label for="password">Pasword</label>
             <input type="password" name="password" id="password">
         </div>
+        <div class="hidden">
+            <input type="level" name="level" id="level" value="peserta">
+        </div>
+        <div class="hidden">
+            <input type="status" name="status" id="status" value="anggota">
+        </div>
         <div>
             <button type="submit">Create an account</button>
         </div>
