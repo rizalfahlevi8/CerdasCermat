@@ -6,11 +6,11 @@
     <img src="{{ asset('assets/img/Group 634.png') }}" alt="Rocket" class="block w-full h-full object-contain">
 </div>
 
-<div class="bg-green-50 min-h-screen flex items-center justify-end" style="margin-right: 4cm;">
-    <div class="max-w-md w-full p-10 rounded-lg shadow-lg mx-auto lg:mx-0">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-1 text-center">Data Anggota</h2> <br>
+<div class="bg-green-50 min-h-screen flex items-center justify-end">
+    <div class="max-w-md w-full p-10 rounded-lg shadow-lg mx-auto lg:mx-0" style="margin-right: 4cm;">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-1 text-center">Register Ketua</h2> <br>
 
-        <form action="/register/anggota" method="POST">
+        <form action="/register/ketua" method="POST">
             @csrf
             <div class="mb-4">
                 <label for="nama_tim" class="block font-medium text-gray-700">Nama Tim</label>
@@ -30,6 +30,9 @@
             <div class="mb-4">
                 <label for="email" class="block font-medium text-gray-700">Email</label>
                 <input type="text" name="email" id="email" class="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-80 ">
+                @error('email')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
 
             <div class="mb-4">
@@ -41,7 +44,7 @@
             <input type="level" name="level" id="level" value="peserta">
         </div>
         <div class="hidden">
-            <input type="status" name="status" id="status" value="anggota">
+            <input type="status" name="status" id="status" value="ketua">
         </div>
         <div>
             <button type="submit">Create an account</button>
@@ -49,6 +52,6 @@
     </form>
     <p>
         Already have an account?
-        <a href="/" method="get">  Login here</a>
+        <a href="/login" method="get">Login here</a>
     </p>
 @endsection

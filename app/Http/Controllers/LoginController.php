@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\LoginRequest;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -11,27 +13,23 @@ class LoginController extends Controller
         return view('auth/login');
     }
 
-    public function create()
+    public function authenticate(LoginRequest $request)
     {
-    }
+        $credentials = $request->validated();
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
 
-    public function store(Request $request)
-    {
-    }
+            // Mendapatkan pengguna yang berhasil login
+            $user = Auth::user();
 
-    public function show(string $id)
-    {
-    }
+            // Memeriksa level pengguna dan mengarahkannya sesuai
+            if ($user->level === 'admin') {
+                return redirect()->intended('admin/dashboard');
+            } elseif ($user->level === 'peserta') {
+                return redirect()->intended('peserta/dashboard');
+            }
+        }
 
-    public function edit(string $id)
-    {
-    }
-
-    public function update(Request $request, string $id)
-    {
-    }
-
-    public function destroy(string $id)
-    {
+        return back()->with('loginError', 'Login failed!');
     }
 }

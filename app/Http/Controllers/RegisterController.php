@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use App\Models\Tim;
 use App\Models\Peserta;
@@ -26,23 +27,27 @@ class RegisterController extends Controller
         return view('auth/registerAnggota');
     }
 
-    public function storeKetua(Request $request)
+    public function storeKetua(RegisterRequest $request)
     {
+        $request->validated();
+
+        $errors = $request->messages();
+
         $tanggal = Carbon::now()->format('d');
         $jam = Carbon::now()->format('h');
         $token = $tanggal . $jam . Str::random(5);
+
+        $user = User::create([
+            'email' => $request->email,
+            'password' => $request->password,
+            'level' => $request->level,
+        ]);
 
         $tim = Tim::create([
             'nama' => $request->nama_tim,
             'institusi' => $request->institusi,
             'token' => $token,
             'jumlah_anggota' => 1,
-        ]);
-
-        $user = User::create([
-            'email' => $request->email,
-            'password' => $request->password,
-            'level' => $request->level,
         ]);
 
         Peserta::create([
@@ -52,11 +57,15 @@ class RegisterController extends Controller
             'id_tim' => $tim->id
         ]);
 
-        return view('auth/token', ['token' => $tim->token]);
+        return view('auth/token', ['token' => $tim->token])->with($errors);
     }
 
-    public function storeAnggota(Request $request)
+    public function storeAnggota(RegisterRequest $request)
     {
+        $request->validated();
+
+        $errors = $request->messages();
+
         // Menemukan token yang sesuai
         $tim = Tim::where('token', $request->token)->first();
         if (!$tim) {
@@ -85,7 +94,7 @@ class RegisterController extends Controller
         $tim->jumlah_anggota += 1;
         $tim->save();
 
-        return view('auth/token', ['token' => $tim->token]);
+        return view('auth/login')->with($errors);
     }
 
     public function show(string $id)

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('status');
+            $table->double('subnilai')->default(0);
             $table->unsignedBigInteger('id_user')->unique()->nullable();
             $table->unsignedBigInteger('id_tim')->nullable();
             $table->foreign('id_user')->references('id')->on('users')->nullOnDelete();
