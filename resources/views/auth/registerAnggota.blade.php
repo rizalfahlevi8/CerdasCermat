@@ -1,13 +1,22 @@
 @extends('app')
 
 @section('container')
-<div class="bg-left-top fixed top-0 left-20">
-    <img src="{{ asset('assets/img/Group 634.png') }}" alt="Rocket" class="block w-full h-full object-contain">
-</div>
 
-<div class="bg-green-50 min-h-screen flex items-center justify-end" >
-    <div class="max-w-md w-full p-10 rounded-lg shadow-lg mx-auto lg:mx-0" style="margin-right: 4cm;">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-1 text-center">Register Anggota</h2> <br>
+<div class="bg-green-50 min-h-screen flex items-center justify-center" >
+    <div class="max-w-md w-full p-10 rounded-lg shadow-lg mx-auto lg:mx-0" style="margin-top: 3cm" >
+        <h2 class="text-2xl font-semibold text-gray-800 mb-1 text-center">Register </h2> <br>
+    
+
+        <div class="flex justify-between">
+            <button type="button" id="switchToSignIn" onclick="window.location.href='/register'" class="group relative w-1/2 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Ketua
+            </button>
+            <button type="button" id="switchToSignUp" onclick="window.location.href='/register/anggota'" class="group relative w-1/2 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Anggota
+            </button>
+            
+            
+        </div><br>
 
         <form action="/register/anggota" method="POST">
             @csrf
