@@ -24,7 +24,7 @@
           <a href="/login" method="get">
             <button type="button" class="text-white bg-emerald-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-2 ">Login</button>
           </a>
-          <a href="/register" method="get">
+          <a href="/register/ketua" method="get">
             <button type="button" class="text-emerald-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-2 ">Registrasi</button>
           </a>
   

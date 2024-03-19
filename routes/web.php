@@ -11,10 +11,9 @@ Route::get('/', function () {
 
 //---------------------Auth-----------------------------
 //Regiter
-Route::get('/register', [RegisterController::class, 'index']);
 Route::prefix('register')->group(function () {
-    Route::get('/ketua', [RegisterController::class, 'createKetua']);
-    Route::get('/anggota', [RegisterController::class, 'createAnggota']);
+    Route::get('/ketua', [RegisterController::class, 'indexKetua']);
+    Route::get('/anggota', [RegisterController::class, 'indexAnggota']);
     Route::post('/ketua', [RegisterController::class, 'storeKetua']);
     Route::post('/anggota', [RegisterController::class, 'storeAnggota']);
 });

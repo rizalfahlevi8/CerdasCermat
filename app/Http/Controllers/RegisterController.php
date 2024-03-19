@@ -12,17 +12,12 @@ use Carbon\Carbon;
 
 class RegisterController extends Controller
 {
-    public function index()
+    public function indexKetua()
     {
         return view('auth/registerKetua');
     }
 
-    public function createKetua()
-    {
-        return view('auth/registerKetua');
-    }
-
-    public function createAnggota()
+    public function indexAnggota()
     {
         return view('auth/registerAnggota');
     }
