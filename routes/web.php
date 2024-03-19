@@ -21,13 +21,6 @@ Route::prefix('register')->group(function () {
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 
-//---------------------Admin----------------------------
-Route::prefix('admin')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'indexAdmin']);
-});
-
-
-//---------------------Peserta----------------------------
-Route::prefix('peserta')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'indexPeserta']);
+Route::prefix('pages')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index']);
 });

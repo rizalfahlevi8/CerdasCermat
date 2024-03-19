@@ -19,15 +19,8 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            // Mendapatkan pengguna yang berhasil login
-            $user = Auth::user();
+            return redirect()->intended('pages/dashboard');
 
-            // Memeriksa level pengguna dan mengarahkannya sesuai
-            if ($user->level === 'admin') {
-                return redirect()->intended('admin/dashboard');
-            } elseif ($user->level === 'peserta') {
-                return redirect()->intended('peserta/dashboard');
-            }
         }
 
         return back()->with('loginError', 'Login failed!');

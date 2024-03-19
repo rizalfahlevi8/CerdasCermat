@@ -17,5 +17,10 @@ class UserSeeder extends Seeder
             'password'=>Hash::make('admin'),
             'level'=>'admin',
         ]);
+
+        DB::table('admin')->insert([
+            'nama'=>'admin',
+            'id_user'=>1, 
+        ]);
     }
 }

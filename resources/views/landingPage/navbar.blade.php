@@ -1,19 +1,3 @@
-<div class="bg-left-top fixed top-0 left-0 ml-0">
-    <img src="{{ asset('assets/img/LPR1.png') }}" alt="page" class="block w-full h-full object-contain">
-</div>
-<div style="position: fixed; top: 0; right: 0;">
-    <div class="bg-left-top ml-0">
-        <img src="{{ asset('assets/img/LPR2.png') }}" alt="page" class="block w-full h-full object-contain">
-    </div>
-</div>
-<div style="position: fixed; top: 0; right: 0; left:">
-    <div class="bg-left-top ml-0">
-        <img src="{{ asset('assets/img/LPR3.png') }}" alt="page" class="block w-full h-full object-contain">
-    </div>
-</div>
-
-
-
 <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-md">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
           <div class="flex items-center space-x-3 rtl:space-x-reverse">
