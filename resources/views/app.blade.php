@@ -22,7 +22,7 @@
     {{-- Tailwind --}}
     @vite('resources/css/app.css')
 </head>
-<body class="bg-[#FDFDFD]">
+<body class="bg-slate-200">
     {{-- Container --}}
     @yield('container')
 
