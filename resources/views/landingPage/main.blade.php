@@ -1,4 +1,4 @@
-@extends('app')
+@extends('landingPage.app')
 
 @section('container')
     {{-- Navbar --}}

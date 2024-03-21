@@ -1,4 +1,4 @@
-@extends('app')
+@extends('landingPage.app')
 
 @section('container')
 <div class="bg-gradient-to-br from-purple-300 to-purple-700 min-h-screen flex items-center justify-center">
