@@ -41,58 +41,36 @@
         </div> 
         
         {{-- Timeline kode --}}
-        <style>@import url('https://fonts.googleapis.com/css?family=Montserrat');*{margin:0;padding:0;border:0}body{font-family:'Montserrat',sans-serif;}ul{list-style:none}#timeline{width:100%;height:1120px;background-color:#fff;padding:20px 1%;}#timeline ul{min-height:950px;border-top:0;border-left:4px solid transparent;border-left-color:#7ab800;-webkit-border-image:-webkit-linear-gradient(top,#7ab800 0%,#0085c3 35%,#f2af00 50%,#ce1126 65%,#6e2585 100%);-moz-border-image:-moz-linear-gradient(top,#7ab800 0%,#0085c3 35%,#f2af00 50%,#ce1126 65%,#6e2585 100%);-ms-border-image:-ms-linear-gradient(top,#7ab800 0%,#0085c3 35%,#f2af00 50%,#ce1126 65%,#6e2585 100%);-o-border-image:-o-linear-gradient(top,#7ab800 0%,#0085c3 35%,#f2af00 50%,#ce1126 65%,#6e2585 100%);border-image:linear-gradient(top,#7ab800 0%,#0085c3 35%,#f2af00 50%,#ce1126 65%,#6e2585 100%);border-image-slice:1;position:relative;top:5%;left:50%;perspective:2000px}#timeline ul li:after{content:"\2713";font-family:fontawesome;display:block;width:35px;height:35px;border-radius:50%;font-weight:100;font-size:90%;line-height:35px;text-align:center;background-color:#7ab800;color:#fff;position:absolute;-webkit-transition:none;transition:none}#timeline ul li:nth-child(2):after{background-color:#0085c3}#timeline ul li:nth-child(3):after{content:"\f11d";background-color:#f2af00}#timeline ul li:nth-child(4):after{content:"\f11d";background-color:#ce1126}#timeline ul li:last-child:after{content:"\f11d";background-color:#6e2585}#timeline ul li .cont{width:200px;height:110px;padding:25px 10px 10px;border:2px solid transparent;border-radius:4px;-webkit-transform:translate(0,-55px);transform:translate(0,-55px);text-transform:capitalize;line-height:150%;font-size:80%;font-family:'Montserrat',sans-serif;position:absolute;top:22px}#timeline ul li:nth-child(odd) .cont{-webkit-transform-origin:left;transform-origin:left;-webkit-transition:none;transition:none}#timeline ul li:nth-child(even) .cont{-webkit-transform-origin:right;transform-origin:right;-webkit-transition:none;transition:none}#timeline ul li:first-child .cont{color:#7ab800}#timeline ul li:nth-child(2) .cont{color:#0085c3}#timeline ul li:nth-child(3) .cont{color:#f2af00}#timeline ul li:nth-child(4) .cont{color:#ce1126}#timeline ul li:last-child .cont{color:#6e2585}#timeline ul li:nth-child(odd):hover .cont{text-align:left;-webkit-transform:none;transform:none;-webkit-transition:none;transition:none}#timeline ul li:nth-child(even)#timeline ul li:nth-child(2) .cont time{background-color:#0085C3}#timeline ul li:nth-child(3) .cont time{background-color:#F2AF00}#timeline ul li:nth-child(4) .cont time{background-color:#CE1126}#timeline ul li:last-child .cont time{background-color:#6E2585}#timeline ul li:nth-child(odd)#timeline ul li .cont p{display:block}#timeline ul li:nth-child(n+1):after{left:-18px}#timeline ul li:first-child:after,#timeline ul li:first-child .cont{top:8%}#timeline ul li:nth-child(2):after,#timeline ul li:nth-child(2) .cont{top:28%}#timeline ul li:nth-child(3):after,#timeline ul li:nth-child(3) .cont{top:48%}#timeline ul li:nth-child(4):after,#timeline ul li:nth-child(4) .cont{top:68%}#timeline ul li:last-child:after,#timeline ul li:last-child .cont{top:88%}#timeline ul li:nth-child(n+1):hover:after{-webkit-transform:none;transform:none;-webkit-transition:none;transition:none}#timeline ul li:first-child .cont{border-color:#7ab800}#timeline ul li:nth-child(2) .cont{border-color:#0085c3}#timeline ul li:nth-child(3) .cont{border-color:#f2af00}#timeline ul li:nth-child(4) .cont{border-color:#ce1126}#timeline ul li:last-child .cont{border-color:#6e2585}#timeline ul li:nth-child(odd) .cont{left:30px}#timeline ul li:nth-child(even) .cont{left:-255px}#timeline ul li .cont:before,#timeline ul li .cont:after{content:"";display:block;width:0;height:0;position:absolute;border-style:solid}#timeline ul li:nth-child(odd) .cont:before{border-width:11px 11px 11px 0}#timeline ul li:nth-child(even) .cont:before{border-width:11px 0 11px 11px}#timeline ul li:nth-child(odd) .cont:after{border-width:10px 10px 10px 0}#timeline ul li:nth-child(even) .cont:after{border-width:10px 0 10px 10px}#timeline ul li:nth-child(odd) .cont:before{top:50%;left:-11px;-webkit-transform:translate(0,-50%);transform:translate(0,-50%)}#timeline ul li:nth-child(even) .cont:before{top:50%;right:-11px;-webkit-transform:translate(0,-50%);transform:translate(0,-50%)}#timeline ul li:first-child .cont:before{border-color:transparent #7ab800 transparent transparent}#timeline ul li:nth-child(2) .cont:before{border-color:transparent transparent transparent #0085c3}#timeline ul li:nth-child(3) .cont:before{border-color:transparent #f2af00 transparent transparent}#timeline ul li:nth-child(4) .cont:before{border-color:transparent transparent transparent #ce1126}#timeline ul li:last-child .cont:before{border-color:transparent #6e2585 transparent transparent}#timeline ul li:nth-child(odd) .cont:after{border-color:transparent #222223;top:50%;left:-9px;-webkit-transform:translate(0,-50%);transform:translate(0,-50%)}#timeline ul li:nth-child(even) .cont:after{border-color:transparent #222223;top:50%;right:-9px;-webkit-transform:translate(0,-50%);transform:translate(0,-50%)}#timeline ul li .cont time{width:100px;height:30px;position:absolute;top:-15px;left:calc(100%/2 - 50px);background-color:#0085c3;color:#f5f5f5;line-height:30px;text-align:center;border-radius:3px}.copy-right{color:#7AB800;text-align:center;text-transform:uppercase;padding:130px 0 20px}.copy-right a{color:#0085C3;text-transform:capitalize}@media screen and (max-width: 600px){#timeline ul li .cont{width:120px;line-height:120%}#timeline ul li:nth-child(even) .cont{left:auto;}}#timeline ul li .cont p,#timeline ul li .cont time{font-size:76%}#timeline ul li .cont time{width:80px;left:calc(100%/2 - 40px)}}</style>
-<!-- Start Timeline -->
-<section id= "timeline">
-    <ul class= "line">
-      <li>
-        <div class="cont">
-          <h3>title here</h3>
-          <p>
-             Informasi lebih lanjut sedang dikerjakan oleh 
-          </p>
-          <time>16 nov, 2016</time>
-        </div>
-      </li>
-      <li>
-        <div class="cont">
-          <h3>title here</h3>
-          <p>
-             Informasi lebih lanjut sedang dikerjakan oleh developer
-          </p>
-          <time>17 nov, 2016</time>
-        </div>
-      </li>
-      <li>
-        <div class="cont">
-          <h3>title here</h3>
-          <p>
-             Informasi lebih lanjut sedang dikerjakan oleh developer 
-          </p>
-          <time>16 nov, 2016</time>
-        </div>
-      </li>
-      <li>
-        <div class="cont">
-          <h3>title here</h3>
-          <p>
-             Informasi lebih lanjut sedang dikerjakan oleh developer 
-          </p>
-          <time>16 nov, 2016</time>
-        </div>
-      </li>
-      <li>
-        <div class="cont">
-          <h3>title here</h3>
-          <p>
-             Informasi lebih lanjut sedang dikerjakan oleh developer 
-          </p>
-          <time>17 nov, 2016</time>
-        </div>
-      </li>
-    </ul>
-    </p>
-  </section>
+        <style>@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");*{margin:0;padding:0;box-sizing:border-box;}body{--color:rgba(30,30,30);--bgColor:rgba(245,245,245);min-height:100vh;display:grid;align-content:center;gap:2rem;padding:2rem;font-family:"Poppins",sans-serif;color:var(--color);background:var(--bgColor);}h1{text-align:center;}ul{--col-gap:2rem;--row-gap:2rem;--line-w:0.25rem;display:grid;grid-template-columns:var(--line-w) 1fr;grid-auto-columns:max-content;column-gap:var(--col-gap);list-style:none;width:min(60rem,90%);margin-inline:auto;}ul::before{content:"";grid-column:1;grid-row:1/span 20;background:rgb(225,225,225);border-radius:calc(var(--line-w) / 2);}ul li:not(:last-child){margin-bottom:var(--row-gap);}ul li{grid-column:2;--inlineP:1.5rem;margin-inline:var(--inlineP);grid-row:span 2;display:grid;grid-template-rows:min-content min-content min-content;}ul li .date{--dateH:3rem;height:var(--dateH);margin-inline:calc(var(--inlineP) * -1);text-align:center;background-color:var(--accent-color);color:white;font-size:1.25rem;font-weight:700;display:grid;place-content:center;position:relative;border-radius:calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);}ul li .date::before{content:"";width:var(--inlineP);aspect-ratio:1;background:var(--accent-color);background-image:linear-gradient(rgba(0,0,0,0.2) 100%,transparent);position:absolute;top:100%;clip-path:polygon(0 0,100% 0,0 100%);right:0;}ul li .date::after{content:"";position:absolute;width:2rem;aspect-ratio:1;background:var(--bgColor);border:0.3rem solid var(--accent-color);border-radius:50%;top:50%;transform:translate(50%,-50%);right:calc(100% + var(--col-gap) + var(--line-w) / 2);}ul li .title,ul li .descr{background:var(--bgColor);position:relative;padding-inline:1.5rem;}ul li .title{overflow:hidden;padding-block-start:1.5rem;padding-block-end:1rem;font-weight:500;}ul li .descr{padding-block-end:1.5rem;font-weight:300;}ul li .title::before,ul li .descr::before{content:"";position:absolute;width:90%;height:0.5rem;background:rgba(0,0,0,0.5);left:50%;border-radius:50%;filter:blur(4px);transform:translate(-50%,50%);}ul li .title::before{bottom:calc(100% + 0.125rem);}ul li .descr::before{z-index:-1;bottom:0.25rem;}@media (min-width:40rem){ul{grid-template-columns:1fr var(--line-w) 1fr;}ul::before{grid-column:2;}ul li:nth-child(odd){grid-column:1;}ul li:nth-child(even){grid-column:3;}ul li:nth-child(2){grid-row:2/4;}ul li:nth-child(odd) .date::before{clip-path:polygon(0 0,100% 0,100% 100%);left:0;}ul li:nth-child(odd) .date::after{transform:translate(-50%,-50%);left:calc(100% + var(--col-gap) + var(--line-w) / 2);}ul li:nth-child(odd) .date{border-radius:0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;}}.credits{margin-top:1rem;text-align:right;}.credits a{color:var(--color);}
+</style>
+        <br><br><br>
+        <ul>
+            <li style="--accent-color:#E82224">
+                <div class="date">2002</div>
+                <div class="title">Title 1</div>
+                <div class="descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!</div>
+            </li>
+            <li style="--accent-color:#0E5C2D">
+                <div class="date">2007</div>
+                <div class="title">Title 2</div>
+                <div class="descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum vero nihil veniam.</div>
+            </li>
+            <li style="--accent-color:#18AFE6">
+                <div class="date">2012</div>
+                <div class="title">Title 3</div>
+                <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe nulla hic.</div>
+            </li>
+            <li style="--accent-color:#E6EB22">
+                <div class="date">2017</div>
+                <div class="title">Title 4</div>
+                <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
+            </li>
+            <li style="--accent-color:#58595B">
+                <div class="date">2022</div>
+                <div class="title">Title 5</div>
+                <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
+            </li>
+        </ul>
   <!-- End Timeline -->
     </div>
 </section>
