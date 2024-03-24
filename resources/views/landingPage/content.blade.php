@@ -46,31 +46,30 @@
         <br><br><br>
         <ul>
             <li style="--accent-color:#E82224">
-                <div class="date">2002</div>
-                <div class="title">Title 1</div>
-                <div class="descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!</div>
+                <div class="date">16 Juli-30 Juli</div>
+                <div class="title"><b> Pendaftaran</b></div>
+                <div class="descr">Peserta dapat melakukan pendaftaran secara online maupun offline berdasarkan rekomendasi instansi</div>
             </li>
             <li style="--accent-color:#0E5C2D">
-                <div class="date">2007</div>
-                <div class="title">Title 2</div>
-                <div class="descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum vero nihil veniam.</div>
+                <div class="date">31 Juli</div>
+                <div class="title"><b>Seleksi Tahap I</b> </div>
+                <div class="descr"><b>peserta datang 30 menit sebelum ujian dimulai dan bersiap pada ruangan masing masing</b></div>
             </li>
             <li style="--accent-color:#18AFE6">
-                <div class="date">2012</div>
-                <div class="title">Title 3</div>
-                <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe nulla hic.</div>
+                <div class="date">4 Agustus</div>
+                <div class="title"><b>Pengumuman Seleksi Tahap I</b></div>
+                <div class="descr">Pengumuman dapat anda akses melalui halaman web Cerdas Cermat</div>
             </li>
             <li style="--accent-color:#E6EB22">
-                <div class="date">2017</div>
-                <div class="title">Title 4</div>
-                <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
+                <div class="date">12 Agustus</div>
+                <div class="title"><b>TM Peserta Finalis 10 besar</b></div>
+                <div class="descr">Tim Finalis 10 besar dapat mengkases link pada web dashboard peserta</div>
             </li>
             <li style="--accent-color:#58595B">
-                <div class="date">2022</div>
-                <div class="title">Title 5</div>
-                <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
+                <div class="date">17 Agustus</div>
+                <div class="title"><b>Pengumuman Final</b></div>
+                <div class="descr">Pengumuman peringkat dapat peserta akses pada beranda halaman web</div>
             </li>
         </ul>
   <!-- End Timeline -->
-    </div>
-</section>
+ 
