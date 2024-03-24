@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BankSoalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -24,6 +25,7 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 //logout
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::prefix('pages')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index']);
-})->middleware('auth');
+
+Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/banksoal', [BankSoalController::class, 'index']);
+

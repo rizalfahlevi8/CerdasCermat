@@ -1,4 +1,4 @@
-@extends('components.main')
+@extends('component.app')
 
 @section('content')
 @if (auth()->user()->level === 'admin')
