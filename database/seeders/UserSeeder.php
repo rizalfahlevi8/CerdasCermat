@@ -16,11 +16,15 @@ class UserSeeder extends Seeder
             'email'=>'admin@gmail.com',
             'password'=>Hash::make('admin'),
             'level'=>'admin',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
 
         DB::table('admin')->insert([
             'nama'=>'admin',
             'id_user'=>1, 
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }

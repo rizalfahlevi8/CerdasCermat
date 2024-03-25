@@ -31,9 +31,4 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 
 //-------------------------------- Bank Soal ---------------------------------------
 
-//kategori soal
-Route::get('/kategorisoal', [KategoriSoalController::class, 'index']);
-
-//bank soal
-Route::get('/banksoal/{id}', [BankSoalController::class, 'index']);
 

@@ -5,15 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OptionSoal extends Model
+class DaftarSoal extends Model
 {
     use HasFactory;
-    protected $table = 'option_soal';
     protected $guarded = [
         'id',
     ];
 
-    public function soal(){
-        return $this->belongsTo(BankSoal::class);
+    protected $casts = [
+        'opsi_jawaban' => 'json',
+    ];
+
+    public function paketSoal()
+    {
+        return $this->belongsTo(PaketSoal::class, 'id_paket', 'id');
     }
 }

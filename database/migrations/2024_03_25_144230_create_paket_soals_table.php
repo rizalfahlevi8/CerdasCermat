@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('option_soal', function (Blueprint $table) {
+        Schema::create('paket_soals', function (Blueprint $table) {
             $table->id();
-            $table->string('option');
-            $table->unsignedBigInteger('id_soal')->nullable();
-            $table->foreign('id_soal')->references('id')->on('bank_soal')->restrictOnDelete();
+            $table->string('bidang_lomba');
+            $table->dateTime('tanggal_pelaksanaan')->nullable();
+            $table->tinyInteger('ditutup')->default(0);
+            $table->tinyInteger('publish')->default(0)->nullable();
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('option_soal');
+        Schema::dropIfExists('paket_soals');
     }
 };
