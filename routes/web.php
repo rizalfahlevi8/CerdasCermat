@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('landingPage.main');
@@ -25,5 +26,7 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::prefix('pages')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/user', [UserController::class, 'index'])->name('user');
 })->middleware('auth');
+

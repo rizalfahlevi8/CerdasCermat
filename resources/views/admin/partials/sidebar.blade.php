@@ -6,8 +6,9 @@
             class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
             href="#"
           >
-            Windmill
+            Cerdas Cermat
           </a>
+          <!-- Dashboard -->
           <ul class="mt-6">
             <li class="relative px-6 py-3">
               <span
@@ -16,7 +17,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="index.html"
+                href="{{ route('dashboard') }}"
               >
                 <svg
                   class="w-5 h-5"
@@ -36,11 +37,12 @@
               </a>
             </li>
           </ul>
+          <!-- User -->
           <ul>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="forms.html"
+                href="{{ route('user') }}"
               >
                 <svg
                   class="w-5 h-5"
@@ -52,14 +54,14 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-                  ></path>
+                <path
+                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                    ></path>
                 </svg>
-                <span class="ml-4">Forms</span>
+                <span class="ml-4">User</span>
               </a>
             </li>
-            <li class="relative px-6 py-3">
+            <!-- <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="cards.html"
@@ -243,7 +245,7 @@
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                   >
                     <a class="w-full" href="pages/blank.html">Blank</a>
-                  </li>
+                  </li> -->
                 </ul>
               </template>
             </li>
