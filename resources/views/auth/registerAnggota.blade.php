@@ -51,13 +51,13 @@
             <input type="hidden" name="status" id="status" value="anggota">
 
             <div class="mb-4">
-                <button type="submit" class="mt-3 w-full bg-gradient-to-br from-purple-500 to-purple-700 hover:bg-blue-700 text-white font-medium text-sm py-2 px-4 rounded mb-5">Buat Akun</button>
+                <button type="submit" class="mt-3 w-full bg-emerald-800 hover:bg-esmerald-700 text-white font-medium text-sm py-2 px-4 rounded mb-5">Buat Akun</button>
             </div>
         </form>
 
         <p class="text-center text-sm">
             Apakah Telah memiliki akun?
-            <a href="/login" method="get" class="text-emerald-500">Login disini</a>
+            <a href="/login" method="get" class="text-emerald-700">Login disini</a>
         </p>
     </div>
 </div>

@@ -9,18 +9,12 @@
                     <td>No</td>
                     <td>Kategori</td>
                     <td>Action</td>
-                </tr>
             </thead>
             <tbody>
-                @foreach ($kategoris as $kategori)
+                @foreach ($banksoals as $banksoal)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $kategori->kategori }}</td>
-                        <td>
-                            <a href="/banksoal/{{ $kategori->id }}">
-                            <button>Bank Soal</button>
-                            </a>
-                        </td>
+                        <td>{{ $banksoal->soal }}</td>
                     </tr>
                 @endforeach
             </tbody>

@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KategoriSoal;
+use App\Models\BankSoal;
 use Illuminate\Http\Request;
 
 class BankSoalController extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        $kategoris = KategoriSoal::all();
-        return view('pages/bankSoal/kategoriSoal', compact('kategoris'));
+        $banksoals = BankSoal::where('id_kategori', $id)->get();
+        return view('pages.bankSoal.bankSoal', compact('banksoals'));
     }
 }

@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('option_soal', function (Blueprint $table) {
             $table->id();
             $table->string('option');
-            $table->unsignedBigInteger('id_soal')->unique()->nullable();
-            $table->foreign('id_soal')->references('id')->on('bank_soal')->nullOnDelete();
+            $table->unsignedBigInteger('id_soal')->nullable();
+            $table->foreign('id_soal')->references('id')->on('bank_soal')->restrictOnDelete();
             $table->timestamps();
         });
     }

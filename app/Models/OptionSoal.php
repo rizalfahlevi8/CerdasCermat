@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OptionJawaban extends Model
+class OptionSoal extends Model
 {
     use HasFactory;
     protected $table = 'option_soal';

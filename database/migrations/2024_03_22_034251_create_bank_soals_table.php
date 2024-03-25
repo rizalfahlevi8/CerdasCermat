@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('soal');
             $table->string('kunci');
             $table->double('skor')->default(0);
-            $table->unsignedBigInteger('id_kategori')->unique()->nullable();
-            $table->foreign('id_kategori')->references('id')->on('kategori_soal')->nullOnDelete();
+            $table->unsignedBigInteger('id_kategori')->nullable();
+            $table->foreign('id_kategori')->references('id')->on('kategori_soal')->restrictOnDelete();
             $table->timestamps();
         });
     }

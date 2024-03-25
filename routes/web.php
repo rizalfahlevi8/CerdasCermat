@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KategoriSoalController;
 
 Route::get('/', function () {
     return view('landingPage.main');
@@ -25,7 +26,14 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 //logout
 Route::post('/logout', [LoginController::class, 'logout']);
 
-
+//dashboard
 Route::get('/dashboard', [DashboardController::class, 'index']);
-Route::get('/banksoal', [BankSoalController::class, 'index']);
+
+//-------------------------------- Bank Soal ---------------------------------------
+
+//kategori soal
+Route::get('/kategorisoal', [KategoriSoalController::class, 'index']);
+
+//bank soal
+Route::get('/banksoal/{id}', [BankSoalController::class, 'index']);
 

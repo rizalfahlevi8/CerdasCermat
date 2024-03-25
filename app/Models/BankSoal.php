@@ -15,4 +15,7 @@ class BankSoal extends Model
     public function kategori(){
         return $this->belongsTo(KategoriSoal::class);
     }
+    public function pilihanJawaban(){
+        return $this->hasMany(OptionSoal::class);
+    }
 }
