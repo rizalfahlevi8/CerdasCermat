@@ -28,21 +28,12 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 //logout
 Route::post('/logout', [LoginController::class, 'logout']);
 
-//dashboard
+//------------------------------- dashboard ---------------------------------------
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-//user
+
+//---------------------------------- User ------------------------------------------
 Route::get('/user', [UserController::class, 'index'])->name('user');
 Route::get('/add-user', [UserController::class, 'create'])->name('user.create');
-
-//-------------------------------- Bank Soal ---------------------------------------
-
-//kategori soal
-Route::get('/kategorisoal', [KategoriSoalController::class, 'index']);
-
-//bank soal
-Route::get('/banksoal/{id}', [BankSoalController::class, 'index']);
-=======
-Route::get('/dashboard', [DashboardController::class, 'index']);
 
 //-------------------------------- Bank Soal ---------------------------------------
 Route::get('/pakets', [PaketSoalController::class, 'index']);
