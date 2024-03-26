@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\BankSoalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KategoriSoalController;
 use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
@@ -25,8 +27,17 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 //logout
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::prefix('pages')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/user', [UserController::class, 'index'])->name('user');
-})->middleware('auth');
+//dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+//user
+Route::get('/user', [UserController::class, 'index'])->name('user');
+Route::get('/add-user', [UserController::class, 'create'])->name('user.create');
+
+//-------------------------------- Bank Soal ---------------------------------------
+
+//kategori soal
+Route::get('/kategorisoal', [KategoriSoalController::class, 'index']);
+
+//bank soal
+Route::get('/banksoal/{id}', [BankSoalController::class, 'index']);
 

@@ -1,4 +1,4 @@
-@extends('components.main')
+@extends('component.app')
 
 @section('content')
 @if (auth()->user()->level === 'admin')
@@ -9,7 +9,7 @@
             >
               Dashboard
             </h2>
-                <h2 class="font-bold text-3xl">Selamat datang {{ $myData->nama }}</h2>
+                <h2 class="font-bold text-gray-700 dark:text-gray-200">Selamat datang {{ $myData->nama }}</h2>
             <br>
             <!-- Cards -->
             <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
@@ -91,24 +91,19 @@
           </div>
 </section>
 @elseif (auth()->user()->level === 'peserta')
-<section class="mt-16" >
-    <div class="py-11 flex flex-col justify-center bg-cover bg-center" style="background-image: url('{{ asset('assets/img/card.png') }}');">
-        <div class="mx-32">
-            <div class="text-white my-2">
-                <span class="font-bold text-3xl">Selamat datang {{ $myData->nama }}</span>
-                <p>Semoga aktivitas perlombaanmu menyenangkan</p> 
-            </div>
-            <div class="bg-white m-0 flex flex-col rounded-lg">
-                <div class="mx-3 mt-3">Quiz</div> 
-                <div class="m-3 border border-slate-950 flex flex-col">
-                    <div>
-                        lomba 1
-                    </div>
+<div class="container px-6 mx-auto grid">
+            <h2
+              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
+            >
+              Dashboard
+            </h2>
+                <h2 class="font-bold text-gray-700 dark:text-gray-200">Selamat datang {{ $myData->nama }}</h2>
+            <br>
+            <!-- Cards -->
+            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
 
-                </div>
             </div>
-        </div>
-    </div>
+          </div>
 </section>
 
 
