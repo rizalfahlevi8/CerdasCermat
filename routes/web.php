@@ -40,4 +40,8 @@ Route::get('/kategorisoal', [KategoriSoalController::class, 'index']);
 
 //bank soal
 Route::get('/banksoal/{id}', [BankSoalController::class, 'index']);
+=======
+Route::get('/dashboard', [DashboardController::class, 'index']);
+
+//-------------------------------- Bank Soal ---------------------------------------
 
