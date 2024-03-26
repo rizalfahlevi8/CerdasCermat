@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('daftar_soals', function (Blueprint $table) {
             $table->id();
+            $table->string('nomor_soal')->nullable();
             $table->text('pertanyaan')->nullable();
             $table->string('gambar_pertanyaan')->nullable();
             $table->json('opsi_jawaban')->nullable();

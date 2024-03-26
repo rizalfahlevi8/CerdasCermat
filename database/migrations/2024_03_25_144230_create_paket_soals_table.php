@@ -13,10 +13,7 @@ return new class extends Migration
     {
         Schema::create('paket_soals', function (Blueprint $table) {
             $table->id();
-            $table->string('bidang_lomba');
-            $table->dateTime('tanggal_pelaksanaan')->nullable();
-            $table->tinyInteger('ditutup')->default(0);
-            $table->tinyInteger('publish')->default(0)->nullable();
+            $table->string('jenis_paket');
             $table->timestamps();
         });
     }
