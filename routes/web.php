@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KategoriSoalController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('landingPage.main');
@@ -27,8 +28,20 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 //dashboard
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+//user
+Route::get('/user', [UserController::class, 'index'])->name('user');
+Route::get('/add-user', [UserController::class, 'create'])->name('user.create');
 
 //-------------------------------- Bank Soal ---------------------------------------
 
+//kategori soal
+Route::get('/kategorisoal', [KategoriSoalController::class, 'index']);
+
+//bank soal
+Route::get('/banksoal/{id}', [BankSoalController::class, 'index']);
+=======
+Route::get('/dashboard', [DashboardController::class, 'index']);
+
+//-------------------------------- Bank Soal ---------------------------------------
 
